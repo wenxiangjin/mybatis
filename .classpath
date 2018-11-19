@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/mybatis-3.4.6/lib/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/mybatis-3.4.6/lib/slf4j-log4j12-1.7.25.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Desktop/mybatis-3.4.6/mybatis-3.4.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

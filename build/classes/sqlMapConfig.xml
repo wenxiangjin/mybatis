@@ -17,9 +17,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 定义别名 -->
 	<typeAliases>
 		<!-- 针对单个别名 -->
-<!-- 	<typeAlias type="com.cauchy.mybatis.po.User" alias="user"/> -->
 		<!-- 批量别名的定义 别名就是类名，首字母大写或者小写都可以-->
-		<package name="com.cauchy.mybatis.po"/>
+		<package name="com.mybatis.po.User"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -44,7 +43,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<!-- 一次加载一个文件 -->
 		<!-- <mapper resource="sqlmap/User.xml"/> -->
 		<!-- 批量加载文件 -->
-		<package name="com.cauchy.mybatis.mapper"/>
+		<package name="sqlmap/user.xml"/>
 		
 	</mappers>
 </configuration>

@@ -10,7 +10,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	#{}表示占位符，#{id} 表示接受输入的参数如果输入的参数为简单类型，#{}中的参数名可以任意
 	resultType为输出类型，
 	-->
-		<select id = "findUserById" parameterType = "int" resultType = "com.mybatis.po.User">
+		<select id = "findUserById" parameterType = "int" 
+		resultType = "com.mybatis.po.User">
 		select * from user where id = #{id}
 	</select>
+	
 </mapper>
