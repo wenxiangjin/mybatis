@@ -2,48 +2,21 @@
 <!DOCTYPE configuration
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration>
-	<!-- 加载数据库配置信息 -->
-	<properties resource="db.properties"></properties>
-	<settings>
-		<!-- 打开延迟加载的开关 -->
-		<setting name="lazyLoadingEnabled" value="true"/>
-		<!-- 将积极加载改为消极加载 -->
-		<setting name="aggressiveLazyLoading" value="false"/>
-		<!-- 开启二级缓存 -->
-		<setting name="cacheEnabled" value="true"/>
-	</settings>
-	<!-- 配置全局参数 -->
-	<!-- 定义别名 -->
-	<typeAliases>
-		<!-- 针对单个别名 -->
-		<!-- 批量别名的定义 别名就是类名，首字母大写或者小写都可以-->
-		<package name="com.mybatis.po.User"/>
-	</typeAliases>
-	<environments default="development">
-		<environment id="development">
-			<!-- 使用jdbc事务管理器 -->
-			<transactionManager type="JDBC"/>
-				<!-- 数据连接池 -->
-				<dataSource type = "POOLED">
-					<property name="driver" value="com.mysql.jdbc.Driver"/>
-					<property name="url" value="jdbc:mysql://localhost:3306/mybatis"></property>
-					<property name="username" value="root"></property>
-					<property name="password" value="rootroot"></property>
-				</dataSource>
-		</environment>
-	</environments>
-	<mappers>
-		<!-- 通过mapper接口来加载映射文件 
-		遵循一些规范：需要将mapper接口的类名和mapper.xml映射文件名称保持一致，并且在一个目录
-		上边的规范的前提是使用mapper代理方式，
-		-->
-		<!-- 加载单个文件 -->
-		<!-- mapper class = "com.cauchy.mybatis.mapper.UserMapper"/>-->
-		<!-- 一次加载一个文件 -->
-		<!-- <mapper resource="sqlmap/User.xml"/> -->
-		<!-- 批量加载文件 -->
-		<package name="sqlmap/user.xml"/>
-		
-	</mappers>
+<configuration> 
+		<environments default="development">
+				<environment id ="development">
+						<!-- 使用jdbc事务管理器 -->
+						<transactionManager type="JDBC"/>
+						<!-- 数据库连接池 -->
+						<dataSource type="POOLED">
+								<property name="driver" value="com.mysql.jdbc.Driver"/>
+								<property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+								<property name="username" value="root"/>
+								<property name="password" value="rootroot"/>
+						</dataSource>
+				</environment>
+		</environments>
+		<mappers>
+				<mapper resource = "sqlmap/user.xml"/>
+		</mappers>
 </configuration>

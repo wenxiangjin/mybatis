@@ -14,5 +14,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		resultType = "com.mybatis.po.User">
 		select * from user where id = #{id}
 	</select>
+	<!--#｛｝表示一个占位符${}表示	拼接符合 
+	 -->
+ <select id ="findUserByName" parameterType ="int" resultType="com.mybatis.po.User" >
+		select * from user where username like '%${value}%'
+</select>
+<!--  添加用户 paramererType输入参数类型
+ -->
+ <insert id="insertUser"  parameterType="com.mybatis.po.User">
+ insert  into user ( id,username,birthday,sex,address) value(#{id},#{username},#{birthday},#{sex},#{address})
+ </insert>
 	
 </mapper>
